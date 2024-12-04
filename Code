@@ -1,0 +1,33 @@
+#include <Wire.h>
+#include <Adafruit_LiquidCrystal.h>
+
+Adafruit_LiquidCrystal lcd(0); 
+#define tempPin A0 // TMP36 connected to A0
+
+void setup() {
+  lcd.begin(16, 2); 
+  lcd.print("Initializing...");
+  delay(2000);
+  lcd.clear(); 
+  randomSeed(analogRead(0)); 
+}
+
+void loop() {
+  int tempValue = analogRead(tempPin);
+  float voltage = tempValue * (5.0 / 1023.0);
+  float temperature = (voltage - 0.5) * 100.0; 
+  
+  int pressure = random(0, 1010); 
+
+  lcd.setCursor(0, 0); 
+  lcd.print("Temp: ");
+  lcd.print(temperature);
+  lcd.print(" C");
+
+  lcd.setCursor(0, 1); 
+  lcd.print("Pressure: ");
+  lcd.print(pressure);
+  lcd.print(" Pa");
+  delay(1000); 
+}
+
