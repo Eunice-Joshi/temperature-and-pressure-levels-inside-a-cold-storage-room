@@ -12,7 +12,10 @@ Vout (Middle Pin) ->Connect to Analog Pin A0 on Arduino.
 GND (Left Pin) ->Connect to Arduino GND.
 Vcc (Right Pin) -> Connect to Arduino 5V.
 2. LCD with I2C Backpack
-SDA Pin → Connect to Arduino A4 (Uno) or 20 (Mega).
-SCL Pin → Connect to Arduino A5 (Uno) or 21 (Mega).
-GND → Connect to Arduino GND.
-Vcc → Connect to Arduino 5V.
+SDA Pin -> Connect to Arduino A4 (Uno) or 20 (Mega).
+SCL Pin -> Connect to Arduino A5 (Uno) or 21 (Mega).
+GND -> Connect to Arduino GND.
+Vcc -> Connect to Arduino 5V.
+
+
+
