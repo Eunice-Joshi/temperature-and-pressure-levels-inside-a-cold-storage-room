@@ -1,0 +1,42 @@
+Materials Required:
+➢ Temperature Sensors
+➢ Pressure Sensors
+➢ Data Logger or Microcontroller
+➢ Display/Monitor
+➢ Power Supply
+➢ Multimeter
+➢ Power Source
+➢ Esp 8266
+➢ Jumper wire
+
+
+Software Requirement
+Arduino IDE
+
+
+Procedure
+➢ Connect the VCC pin of the sensor to the 5V pin of the ESP8266 (or 3.3V if using a
+DHT11).
+➢ Connect the GND pin to the GND of the ESP8266.
+➢ Connect the DATA pin to a GPIO pin (e.g., D2 or D4).
+➢ If using DHT11/DHT22, place a 4.7kΩ resistor between the VCC and DATA pin.
+➢ LM35: Connect the VCC to 5V, GND to GND, and the Analog OUT to an available
+ADC pin on the ESP8266 (e.g., A0).
+➢ DS18B20: Connect VCC to 3.3V, GND to GND, and DATA to a GPIO pin (e.g.,
+D2). Use a 4.7kΩ pull-up resistor between the VCC and DATA pins.
+➢ The ESP8266 using a USB cable from your laptop or an external 5V power source.
+➢ Install the necessary libraries in the Arduino IDE for the temperature sensor. For
+example:
+➢ DHT11/DHT22: Install the DHT sensor library.
+➢ DS18B20: Install the OneWire and DallasTemperature libraries.
+➢ If you're using a cloud platform (e.g., ThingSpeak or Blynk) for visualization:
+➢ Install the ThingSpeak or Blynk library.
+➢ Write a simple code to read the temperature data from the sensor and send it to the
+cloud for visualization. Here’s an example of what the code might look like for a
+DHT22 sensor with ThingSpeak:
+➢ Upload the code to the ESP8266 using the Arduino IDE. Ensure the board is correctly
+selected
+➢ Mount the temperature sensor inside the cold storage room. Ensure it’s placed away
+from direct airflow from the refrigeration unit to avoid inaccurate readings.
+➢ Once the ESP8266 is powered on and running, you should be able to see real-time
+temperature data being sent to your chosen cloud platform or local server
